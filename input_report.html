@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Enter a Sprint Report</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="theme.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body role="document">
+    <div class="navbar-wrapper">
+  		<div class="container">
+
+  			<nav class="navbar navbar-inverse navbar-static-top">
+  				<div class="container">
+  					<div class="navbar-header">
+  						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+  							<span class="sr-only">Toggle navigation</span>
+  							<span class="icon-bar"></span>
+  							<span class="icon-bar"></span>
+  							<span class="icon-bar"></span>
+  						</button>
+  						<a class="navbar-brand" href="Delivery Group new.html">Sprint Reports</a>
+  					</div>
+  					<div id="navbar" class="navbar-collapse collapse">
+  						<ul class="nav navbar-nav">
+  							<li class="active"><a href="index.html">Home</a></li>
+  							<li><a href="view_report.html">Find a report</a></li>
+  							<li><a href="input_report.html">Input a report</a></li>
+  							<li><a href="#">Custom Search</a></li>
+  						</ul>
+  					</div>
+  				</div>
+  			</nav>
+
+  		</div>
+  	</div>
+
+<div class="container theme-showcase" role="main">
+
+  <div class="page-header">
+    <h1>Create Sprint Report</h1>
+  </div>
+
+  <form>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Basic Information</h3>
+      </div>
+      <div class="panel-body">
+        <div class="form-group">
+          <div class="col-md-6">
+            <label for="scrumTeam">Which team is this report for?</label>
+            <select name="scrumTeam" id="scrumTeam" class="form-control">
+              <option value="Mig">Migration</option>
+              <option value="DRV">Digital Register View</option>
+              <option value="DM">Digital Mortgage</option>
+              <option value="cwork">Casework</option>
+              <option value="datapub">Data Publication</option>
+              <option value="DLC">Digital Land Charges</option>
+            </select>
+            <br />
+            <label for="sprintNumber">What Sprint is this report for?</label>
+            <input type="number" class="form-control" id="sprintNumber" placeholder="Sprint Number">
+          </div>
+          <div class="col-md-6">
+            <label for="startDate">When did the sprint start?</label>
+            <input type="date" class="form-control" id="startDate">
+            <br />
+            <label for="endDate">When did the sprint end</label>
+            <input type="date" class="form-control" id="endDate">
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Sprint Goal and Status</h3>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+        <label for="sprintStatus">What is the sprint status?</label>
+        <label class="radio-inline">
+          <input type="radio" name="sprintStatus" id="happy" value="Happy"> Happy
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="sprintStatus" id="ok" value="OK"> OK
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="sprintStatus" id="sad" value="Sad"> Sad
+        </label>
+        <br />
+        <br />
+        <label for="sprintGoal">What was the Sprint Goal?</label>
+        <textarea class="form-control" rows="5" id="sprintGoal">Sprint Goal</textarea>
+        <br />
+        <label for="deliverables">What were the key Deliverables?</label>
+        <textarea class="form-control" rows="5" id="deliverables">Key Deliverables</textarea>
+        <br />
+        <label for="challenges">What challenges were there?</label>
+        <textarea class="form-control" rows="5" id="challenges">Challenges</textarea>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Sprint Points and Velocity</h3>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+        <div class="col-md-6">
+          <label for="agreedPoints">How many points were agreed at the beginning of sprint?</label>
+          <input type="number" class="form-control" id="agreedPoints">
+        </div>
+        <div class="col-md-6">
+          <label for="deliveredPoints">How many points were delivered?</label>
+          <input type="number" class="form-control" id="agreedPoints">
+          <br />
+        </div>
+
+        <div>
+          <table class="table table-hover">
+            <caption>Points/Resouce Breakdown</caption>
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>Points Delivered</th>
+                <th>Resource Spent (mandays)</th>
+                <th>Bugs fixed</th>
+                <th>Chores/Spikes Completed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td><input type="number" class="form-control" id="day1Points"></td>
+                <td><input type="number" class="form-control" id="day1Resource"></td>
+                <td><input type="number" class="form-control" id="day1Bugs"></td>
+                <td><input type="number" class="form-control" id="day1Spike"></td>
+              </tr>
+              <tr>
+              <th scope="row">2</th>
+                <td><input type="number" class="form-control" id="day2Points"></td>
+                <td><input type="number" class="form-control" id="day2Resource"></td>
+                <td><input type="number" class="form-control" id="day2Bugs"></td>
+                <td><input type="number" class="form-control" id="day2Spike"></td>
+              </tr>
+              <tr>
+              <th scope="row">3</th>
+                <td><input type="number" class="form-control" id="day3Points"></td>
+                <td><input type="number" class="form-control" id="day3Resource"></td>
+                <td><input type="number" class="form-control" id="day3Bugs"></td>
+                <td><input type="number" class="form-control" id="day3Spike"></td>
+              </tr>
+              <tr>
+              <th scope="row">4</th>
+                <td><input type="number" class="form-control" id="day4Points"></td>
+                <td><input type="number" class="form-control" id="day4Resource"></td>
+                <td><input type="number" class="form-control" id="day4Bugs"></td>
+                <td><input type="number" class="form-control" id="day4Spike"></td>
+              </tr>
+              <tr>
+              <th scope="row">5</th>
+                <td><input type="number" class="form-control" id="day5Points"></td>
+                <td><input type="number" class="form-control" id="day5Resource"></td>
+                <td><input type="number" class="form-control" id="day5Bugs"></td>
+                <td><input type="number" class="form-control" id="day5Spike"></td>
+              </tr>
+              <tr>
+              <th scope="row">6</th>
+                <td><input type="number" class="form-control" id="day6Points"></td>
+                <td><input type="number" class="form-control" id="day6Resource"></td>
+                <td><input type="number" class="form-control" id="day6Bugs"></td>
+                <td><input type="number" class="form-control" id="day6Spike"></td>
+              </tr>
+              <tr>
+              <th scope="row">7</th>
+                <td><input type="number" class="form-control" id="day7Points"></td>
+                <td><input type="number" class="form-control" id="day7Resource"></td>
+                <td><input type="number" class="form-control" id="day7Bugs"></td>
+                <td><input type="number" class="form-control" id="day7Spike"></td>
+              </tr>
+              <tr>
+              <th scope="row">8</th>
+                <td><input type="number" class="form-control" id="day8Points"></td>
+                <td><input type="number" class="form-control" id="day8Resource"></td>
+                <td><input type="number" class="form-control" id="day8Bugs"></td>
+                <td><input type="number" class="form-control" id="day8Spike"></td>
+              </tr>
+              <tr>
+              <th scope="row">9</th>
+                <td><input type="number" class="form-control" id="day9Points"></td>
+                <td><input type="number" class="form-control" id="day9Resource"></td>
+                <td><input type="number" class="form-control" id="day9Bugs"></td>
+                <td><input type="number" class="form-control" id="day9Spike"></td>
+              </tr>
+              <tr>
+              <th scope="row">10</th>
+                <td><input type="number" class="form-control" id="day10Points"></td>
+                <td><input type="number" class="form-control" id="day10Resource"></td>
+                <td><input type="number" class="form-control" id="day10Bugs"></td>
+                <td><input type="number" class="form-control" id="day10Spike"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Risk, Issues and Dependencies</h3>
+    </div>
+    <div class="panel-body">
+      <div class="form-group">
+        <div class="col-md-4">
+          <label for="issues">Are there any issues as a result of the sprint</label>
+          <textarea class="form-control" id="issues" rows="5">Issues</textarea>
+        </div>
+        <div class="col-md-4">
+          <label for="risks">Are there any risks as a result of the sprint?</label>
+          <textarea class="form-control" id="risks" rows="5">Risks</textarea>
+        </div>
+        <div class="col-md-4">
+          <label for="dependencies">Are there any new dependencies?</label>
+          <textarea class="form-control" id="dependencies" rows="5">Dependencies</textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  </form>
+</div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
